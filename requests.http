@@ -1,0 +1,40 @@
+PUT http://localhost:8080/shorten
+Content-Type: application/x-www-form-urlencoded
+Authorization: foobar
+
+url=https://www.google.com
+
+
+###
+PUT http://localhost:8080/shorten
+Content-Type: application/x-www-form-urlencoded
+Authorization: foobar
+
+url=https://www.google.com/search?q=hi
+
+
+###
+PUT http://localhost:8080/shorten
+Content-Type: application/x-www-form-urlencoded
+Authorization: foobar
+
+url=https://www.google.com/search?q=hui
+
+
+###
+PUT http://localhost:8080/shorten
+Content-Type: application/x-www-form-urlencoded
+Authorization: foobar
+
+url=https://www.google.com/search?q=hi7
+
+
+###
+GET http://localhost:8080/4
+Accept: application/json
+Authorization: foobar
+
+
+###
+
+
