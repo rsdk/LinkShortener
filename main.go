@@ -22,8 +22,8 @@ func main() {
 	defer stop()
 
 	router := gin.Default()
-	router.PUT("/shorten", controllers.ShortenURL)
-	router.GET("/:id", controllers.GetURL)
+	router.PUT("/s/shorten", controllers.ShortenURL)
+	router.GET("/s/:id", controllers.GetURL)
 
 	srv := &http.Server{
 		Addr:    ":8080",
