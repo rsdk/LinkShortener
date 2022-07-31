@@ -32,6 +32,10 @@ func ShortenURL(c *gin.Context) {
 
 	url := c.PostForm("url")
 	shortId := models.SaveUrl(url)
-	c.IndentedJSON(http.StatusOK, gin.H{"short": viper.GetString("BaseUrl") + strconv.FormatUint(uint64(shortId), 10)})
+	var urlPrefix string
+	if len(viper.GetString("urlPrefix")) > 0 {
+		urlPrefix += viper.GetString("urlPrefix") + "/"
+	}
+	c.IndentedJSON(http.StatusOK, gin.H{"short": viper.GetString("BaseUrl") + urlPrefix + strconv.FormatUint(uint64(shortId), 10)})
 	return
 }

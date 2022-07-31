@@ -22,7 +22,7 @@ url=https://www.google.com/search?q=hui
 
 
 ###
-PUT http://localhost:8080/shorten
+PUT http://localhost:8080/s/shorten
 Content-Type: application/x-www-form-urlencoded
 Authorization: foobar
 

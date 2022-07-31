@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
 	"linkShortener/config"
 	"linkShortener/controllers"
 	"linkShortener/models"
@@ -22,11 +23,16 @@ func main() {
 	defer stop()
 
 	router := gin.Default()
-	router.PUT("/s/shorten", controllers.ShortenURL)
-	router.GET("/s/:id", controllers.GetURL)
+	var urlPrefix string
+	if len(viper.GetString("urlPrefix")) > 0 {
+		urlPrefix += "/" + viper.GetString("urlPrefix")
+	}
+	router.PUT(urlPrefix+"/shorten", controllers.ShortenURL)
+	router.GET(urlPrefix+"/:id", controllers.GetURL)
 
+	serverAddress := viper.GetString("IP") + ":" + viper.GetString("Port")
 	srv := &http.Server{
-		Addr:    ":8080",
+		Addr:    serverAddress,
 		Handler: router,
 	}
 
