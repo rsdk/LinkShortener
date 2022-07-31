@@ -1,0 +1,56 @@
+###
+# @no-redirect
+GET http://localhost:8080/s/1
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/2
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/3
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/4
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/5
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/6
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/1
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/2
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/3
+Accept: application/json
+
+###
+# @no-redirect
+GET http://localhost:8080/s/4
+Accept: application/json
+
+
+
+
+
+
+

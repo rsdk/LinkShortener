@@ -1,4 +1,4 @@
-PUT http://localhost:8080/shorten
+PUT http://localhost:8080/s/shorten
 Content-Type: application/x-www-form-urlencoded
 Authorization: foobar
 
@@ -6,11 +6,11 @@ url=https://www.google.com
 
 
 ###
-PUT http://localhost:8080/shorten
+PUT http://localhost:8080/s/shorten
 Content-Type: application/x-www-form-urlencoded
 Authorization: foobar
 
-url=https://www.google.com/search?q=hi
+url=https://www.google.com/search?q=foob
 
 
 ###
@@ -30,11 +30,25 @@ url=https://www.google.com/search?q=hi7
 
 
 ###
-GET http://localhost:8080/2
+# @no-redirect
+GET http://localhost:8080/s/3
 Accept: application/json
 Authorization: foobar
 
 
 ###
+
+PUT http://simstim.de/s/shorten
+Content-Type: application/x-www-form-urlencoded
+Authorization: foobar
+
+url=https://www.google.com
+###
+
+PUT http://simstim.de/s/shorten
+Content-Type: application/x-www-form-urlencoded
+Authorization: foobar
+
+url=http://simstim.de
 
 
