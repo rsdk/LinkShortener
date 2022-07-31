@@ -18,3 +18,24 @@ func TestSaveLoad(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func BenchmarkSave(b *testing.B) {
+	models.InitDB()
+	for i := 0; i < b.N; i++ {
+		models.SaveUrl("http://google.com")
+	}
+}
+
+func BenchmarkLoad(b *testing.B) {
+	models.InitDB()
+	for i := 0; i < b.N; i++ {
+		models.FetchUrl(uint((i % 100) + 1))
+	}
+}
+
+func BenchmarkLoadCached(b *testing.B) {
+	models.InitDB()
+	for i := 0; i < b.N; i++ {
+		models.FetchUrlCached(uint((i % 100) + 1))
+	}
+}
