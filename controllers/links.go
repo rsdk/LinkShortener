@@ -17,11 +17,6 @@ func checkAuth(authToken string) bool {
 }
 
 func GetURL(c *gin.Context) {
-	auth := c.GetHeader("Authorization")
-	if !checkAuth(auth) {
-		c.IndentedJSON(http.StatusUnauthorized, gin.H{"message": "unauthorized"})
-		return
-	}
 	shortId := c.Param("id")
 	var shortIdUint uint64
 	shortIdUint, _ = strconv.ParseUint(shortId, 10, 64)
