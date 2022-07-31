@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LinkShortener Release linux" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="linkShortener" />
+    <working_directory value="$PROJECT_DIR$" />
+    <go_parameters value="-ldflags=&quot;-s -w&quot;" />
+    <kind value="PACKAGE" />
+    <package value="linkShortener" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$" />
+    <output_directory value="$PROJECT_DIR$/release" />
+    <option name="run" value="false" />
+    <method v="2" />
+  </configuration>
+</component>
